@@ -17,8 +17,7 @@ public class binarize {
 		Integer[] pows = new Integer[19];
 		
 		// Generate array of all powers of 2 up to 131072
-		for(int i = 0; i < 18; i++)
-		{
+		for(int i = 0; i < 18; i++) {
 			pows[i] = (int)Math.pow(2,i); 
 		}
 		
