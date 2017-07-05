@@ -14,12 +14,12 @@ public class binarize {
 		Scanner in = new Scanner(new File(args[0]));
 		int n = in.nextInt();
 		
-		Integer[] pows = new Integer[32];
+		Integer[] pows = new Integer[19];
 		
-		// Generate array of all powers of 2. 
-		for(int i = 0; i < 31; i++)
+		// Generate array of all powers of 2 up to 131072
+		for(int i = 0; i < 18; i++)
 		{
-			pows[i] = (int)Math.pow(2,i);  
+			pows[i] = (int)Math.pow(2,i); 
 		}
 		
 		for(int i = 0; i < n; i++) {
@@ -32,7 +32,7 @@ public class binarize {
 				System.out.println(dec + "\n"); 
 			}	
 			else {
-				pows[31] = dec;
+				pows[18] = dec;
 				Arrays.sort(pows); 
 				int idx = Arrays.binarySearch(pows, dec);
 			
